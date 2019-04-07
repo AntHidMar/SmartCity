@@ -26,6 +26,8 @@ public class Ontologia extends Ontology {
   public static final String CONSUMIDOR_PREDICADO = "consumidor_Predicado";
   public static final String PRECIO = "precio";
   public static final String POTENCIANECESITADA = "potenciaNecesitada";
+  public static final String CICLO = "ciclo";
+  public static final String INFO = "info";
   
   
   private static Ontology theInstance = new Ontologia();
@@ -49,7 +51,7 @@ public class Ontologia extends Ontology {
 
 
     try {
-        add(new PredicateSchema(CONSUMIDOR_PREDICADO), Consumidor_Predicado.class);
+        add(new PredicateSchema(CONSUMIDOR_PREDICADO), Agente_Predicado.class);
 		//add(new ConceptSchema(ADDRESS), Address.class);
 		//add(new ConceptSchema(PERSON), Person.class);
 		//add(new ConceptSchema(COMPANY), Company.class);
@@ -66,6 +68,8 @@ public class Ontologia extends Ontology {
         PredicateSchema cs = (PredicateSchema)getSchema(CONSUMIDOR_PREDICADO);
         cs.add(POTENCIANECESITADA, (PrimitiveSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.OPTIONAL);
         cs.add(PRECIO, (PrimitiveSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.OPTIONAL);
+        cs.add(CICLO, (PrimitiveSchema)getSchema(BasicOntology.INTEGER), ObjectSchema.OPTIONAL);
+        cs.add(INFO, (PrimitiveSchema)getSchema(BasicOntology.STRING), ObjectSchema.OPTIONAL);
          /*       
     	cs = (ConceptSchema)getSchema(PERSON);
     	cs.add(PERSON_NAME, (PrimitiveSchema)getSchema(BasicOntology.STRING));

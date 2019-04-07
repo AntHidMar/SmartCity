@@ -14,11 +14,18 @@ import jade.content.Predicate;
 public class Ontologia_Contenedor implements Predicate {
 	
 	private String 	_name;						//Person's name
-	private Long    _age;							//Person's age
+	private int    _ciclo;							//Person's age
 	//private Address _address;					//Address' age
         private Double  _precio;
+        private String _info;
 	
 	// Methods required to use this class to represent the PERSON role
+        public void setInfo(String info) {
+		_info=info;
+	}
+	public String getInfo() {
+		return _info;
+	}
         public void setPrecio(Double precio) {
 		_precio=precio;
 	}
@@ -31,11 +38,11 @@ public class Ontologia_Contenedor implements Predicate {
 	public String getName() {
 		return _name;
 	}
-	public void setAge(Long age) {
-		_age=age;
+	public void setCiclo(int ciclo) {
+		_ciclo=ciclo;
 	}
-	public Long getAge() {
-		return _age;
+	public int getCiclo() {
+		return _ciclo;
         }
         /*
 	public void setAddress(Address address) {

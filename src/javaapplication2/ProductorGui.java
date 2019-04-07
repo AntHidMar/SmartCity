@@ -36,7 +36,7 @@ class ProductorGui extends JFrame {
 				try {
 					String title = titleField.getText().trim();
 					String price = priceField.getText().trim();
-					myAgent.updateCatalogue(title, Integer.parseInt(price));
+					//myAgent.updateCatalogue(title, Integer.parseInt(price));
 					titleField.setText("");
 					priceField.setText("");
 				}
